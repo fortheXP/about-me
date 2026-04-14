@@ -13,6 +13,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
+  IMAGE_NAME: forthexp/about-me
 
 jobs:
   build:
@@ -41,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ env.REGISTRY }}/${{ github.repository }}
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=ref,event=branch
             type=sha

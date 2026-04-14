@@ -1,0 +1,284 @@
+/* ===================================================
+   Nord-inspired theme (like horuspass.com)
+   Supports light + dark mode via prefers-color-scheme
+   =================================================== */
+
+:root {
+  --font-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --txt: #2e3440;
+  --txt-muted: #4c566a;
+  --bg-1: #fff;
+  --bg-2: #eceff4;
+  --line: #eceff4;
+  --link: #bf616a;
+  --accent: #88c0d0;
+  --dot: #d8dee9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --txt: #eceff4;
+    --txt-muted: #d8dee9;
+    --bg-1: #2e3440;
+    --bg-2: #3b4252;
+    --line: #3b4252;
+    --dot: #4c566a;
+    --link: #bf616a;
+    --accent: #88c0d0;
+  }
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-1);
+  font-family: var(--font-main);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--txt);
+  text-rendering: optimizeSpeed;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Layout */
+.container {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+/* Header */
+#dhead {
+  margin-top: 3rem;
+}
+
+#ddesc {
+  grid-column: span 12;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  line-height: 1.25;
+}
+
+h2 {
+  font-weight: normal;
+  font-style: italic;
+  color: var(--txt-muted);
+  font-size: 1.1rem;
+  margin: 0 0 1rem 0;
+}
+
+.iico {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .iico {
+    filter: invert(1);
+  }
+}
+
+.iico:hover {
+  opacity: 1;
+}
+
+hr {
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  margin: 1.5rem 0;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Bio */
+#bio {
+  font-size: 1rem;
+  color: var(--txt-muted);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Section titles */
+.ctitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+/* Timeline entries */
+.entry {
+  margin-bottom: 5px;
+}
+
+.timespan {
+  grid-column: span 1;
+  font-size: 0.85rem;
+  text-align: right;
+  padding-right: 5px;
+  color: var(--dot);
+}
+
+.ico {
+  grid-column: span 1;
+  vertical-align: top;
+  border-left: 2px solid var(--dot);
+  position: relative;
+}
+
+.ico img {
+  border-radius: 5px;
+  width: 100%;
+  max-width: 80px;
+  margin-left: 10px;
+}
+
+.entry-dot {
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 7px;
+  background-color: var(--dot);
+  border: 2px solid var(--bg-1);
+}
+
+.desc {
+  grid-column: span 10;
+  font-size: 1rem;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
+.desc ul {
+  margin-top: 0.5rem;
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.desc li {
+  margin-bottom: 0.35rem;
+  color: var(--txt-muted);
+}
+
+/* Skills */
+.skill-group {
+  margin-bottom: 0.75rem;
+}
+
+.skill-label {
+  font-weight: 700;
+  display: inline;
+  margin-right: 5px;
+  font-size: 0.95rem;
+}
+
+.skill-tags {
+  display: inline;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-tags li {
+  display: inline;
+  font-size: 0.95rem;
+  color: var(--txt-muted);
+}
+
+.skill-tags li::after {
+  content: " · ";
+  color: var(--dot);
+}
+
+.skill-tags li:last-child::after {
+  content: "";
+}
+
+/* Certifications */
+#certs ul {
+  padding-left: 1.25rem;
+}
+
+#certs li {
+  margin-bottom: 0.35rem;
+}
+
+/* Projects */
+.project {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--txt-muted);
+}
+
+.project:last-child {
+  border-bottom: none;
+}
+
+.project strong {
+  color: var(--txt);
+}
+
+/* Awards */
+#awards ul {
+  padding-left: 1.25rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  background: var(--bg-2);
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: var(--txt-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timespan {
+    grid-column: span 2;
+    font-size: 0.8rem;
+  }
+  .ico {
+    grid-column: span 2;
+  }
+  .desc {
+    grid-column: span 8;
+    font-size: 0.95rem;
+    padding-left: 10px;
+  }
+}

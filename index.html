@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bharath M</title>
+    <meta name="description" content="Bharath M — I build and operate cloud platforms that don't break at 3am.">
+    <style>
+        :root {
+            --t: #2e3440;
+            --tm: #4c566a;
+            --b1: #fff;
+            --b2: #eceff4;
+            --ln: #e5e9f0;
+            --lk: #bf616a;
+            --dt: #d8dee9;
+            --ac: #5e81ac
+        }
+
+        @media(prefers-color-scheme:dark) {
+            :root {
+                --t: #eceff4;
+                --tm: #d8dee9;
+                --b1: #2e3440;
+                --b2: #3b4252;
+                --ln: #3b4252;
+                --dt: #4c566a;
+                --ac: #88c0d0
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0
+        }
+
+        body {
+            background: var(--b1);
+            font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: var(--t);
+            padding: 0
+        }
+
+        .w {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem 0
+        }
+
+        a {
+            color: var(--lk);
+            text-decoration: none
+        }
+
+        a:hover {
+            text-decoration: underline
+        }
+
+        hr {
+            border: 0;
+            border-bottom: 1px solid var(--ln);
+            margin: 2rem 0
+        }
+
+        /* hey section */
+        .hey {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: .3rem
+        }
+
+        .sub {
+            color: var(--tm);
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem
+        }
+
+        .links a {
+            margin-right: 1rem;
+            font-size: .9rem;
+            color: var(--ac);
+            font-weight: 500
+        }
+
+        /* prose */
+        .prose {
+            margin-top: 1.5rem;
+            color: var(--tm);
+            line-height: 1.75;
+            font-size: 1rem
+        }
+
+        .prose strong {
+            color: var(--t)
+        }
+
+        /* section label */
+        .label {
+            font-size: .8rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            color: var(--dt);
+            font-weight: 600;
+            margin-bottom: 1rem
+        }
+
+        /* timeline */
+        .tl-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem
+        }
+
+        .tl-year {
+            min-width: 5rem;
+            text-align: right;
+            font-size: .85rem;
+            color: var(--dt);
+            padding-top: 2px;
+            font-variant-numeric: tabular-nums
+        }
+
+        .tl-body {
+            border-left: 2px solid var(--ln);
+            padding-left: 1rem
+        }
+
+        .tl-co {
+            font-weight: 600;
+            font-size: 1rem
+        }
+
+        .tl-role {
+            color: var(--tm);
+            font-size: .95rem;
+            margin-bottom: .3rem
+        }
+
+        .tl-desc {
+            color: var(--tm);
+            font-size: .9rem;
+            line-height: 1.6
+        }
+
+        /* things I work with */
+        .tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem;
+            margin-top: .5rem
+        }
+
+        .tools span {
+            background: var(--b2);
+            color: var(--tm);
+            font-size: .8rem;
+            padding: .2rem .55rem;
+            border-radius: 4px
+        }
+
+        /* highlights — the "brag" numbers */
+        .nums {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin: 1.5rem 0
+        }
+
+        .num {
+            text-align: center
+        }
+
+        .num b {
+            display: block;
+            font-size: 1.6rem;
+            color: var(--ac);
+            font-weight: 700
+        }
+
+        .num small {
+            font-size: .8rem;
+            color: var(--tm)
+        }
+
+        /* certs list */
+        .certs {
+            list-style: none;
+            padding: 0
+        }
+
+        .certs li {
+            margin-bottom: .5rem;
+            padding-left: 1.2rem;
+            position: relative;
+            color: var(--tm);
+            font-size: .95rem
+        }
+
+        .certs li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--dt)
+        }
+
+        /* footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            font-size: .8rem;
+            color: var(--dt);
+            margin-top: 2rem
+        }
+
+        @media(max-width:500px) {
+            .nums {
+                grid-template-columns: 1fr
+            }
+
+            .tl-item {
+                flex-direction: column;
+                gap: .2rem
+            }
+
+            .tl-year {
+                text-align: left
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="w">
+
+        <!-- Intro -->
+        <div class="hey">hey, I'm Bharath 👋</div>
+        <div class="sub">I build and operate cloud platforms that don't break at 3am.</div>
+        <div class="links">
+            <a href="mailto:bharathm.work@gmail.com">email</a>
+            <a href="https://linkedin.com/in/bharath-m-440b1a130">linkedin</a>
+        </div>
+
+        <div class="prose">
+            I'm a <strong>Senior DevOps / SRE</strong> with 8 years of experience shipping
+            cloud-native platforms for Fortune 500 clients. My days revolve around
+            <strong>Kubernetes</strong>, <strong>Terraform</strong>, <strong>CI/CD pipelines</strong>,
+            and making sure observability actually tells you something useful before things go sideways.
+            I'm currently at <strong>PwC</strong>
+            <br><br>
+            Before that, I spent 4 years at <strong>Infosys</strong> automating everything I could
+            get my hands on — from Azure provisioning to incident response.
+            I hold a <strong>B.Sc. in Mathematics</strong> from Madras Christian College.
+            <br><br>
+            Outside work, I run a <strong>self-hosted Kubernetes homelab on a Raspberry Pi</strong> managed entirely
+            through GitOps (this site runs on it). Yes, I do this for fun. I also recently won the
+            <strong>PwC LENN-X Hackathon</strong> 🏆.
+        </div>
+
+        <hr>
+
+        <!-- Highlights -->
+        <div class="label">by the numbers</div>
+        <div class="nums">
+            <div class="num"><b>~8M</b><small>transactions / day</small></div>
+            <div class="num"><b>$580k</b><small>yearly cloud savings</small></div>
+            <div class="num"><b>100%</b><small>uptime, mission-critical</small></div>
+        </div>
+
+        <hr>
+
+        <!-- Where I've worked -->
+        <div class="label">where I've worked</div>
+
+        <div class="tl-item">
+            <div class="tl-year">2022 –</div>
+            <div class="tl-body">
+                <div class="tl-co">PwC</div>
+                <div class="tl-role">Senior Associate · DevOps & SRE</div>
+                <div class="tl-desc">
+                    Observability on EKS for 30+ microservices. GitOps with Argo CD.
+                    Cut response times from 5 min → 20s with Redis retry workflows.
+                    Built distributed tracing (Tempo + Grafana) that saved $580k/yr.
+                    Node-level DNS caching to tame CoreDNS storms. Helm chart standards.
+                    Incident response lead — runbooks, RCA, postmortems.
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-year">2018 – 2022</div>
+            <div class="tl-body">
+                <div class="tl-co">Infosys</div>
+                <div class="tl-role">DevOps Engineer</div>
+                <div class="tl-desc">
+                    Azure infra with Terraform modules. CI/CD on Jenkins & Azure DevOps.
+                    RBAC + Managed Identity hardening. Monitoring with Datadog & Splunk.
+                    Automated everything — health checks, provisioning, scheduled ops.
+                    TLS, NGINX, firewall rules for secure service mesh.
+                </div>
+            </div>
+        </div>
+
+        <div class="tl-item">
+            <div class="tl-year">2014 – 2018</div>
+            <div class="tl-body">
+                <div class="tl-co">Madras Christian College</div>
+                <div class="tl-role">B.Sc. Mathematics</div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Things I work with -->
+        <div class="label">things I work with</div>
+        <div class="tools">
+            <span>AWS</span><span>Azure</span><span>Kubernetes</span><span>Docker</span>
+            <span>Terraform</span><span>Ansible</span><span>Argo CD</span><span>Helm</span>
+            <span>Jenkins</span><span>CodePipeline</span><span>Azure DevOps</span>
+            <span>Prometheus</span><span>Grafana</span><span>Datadog</span><span>Splunk</span>
+            <span>Loki</span><span>Tempo</span><span>Fluentd</span><span>CloudWatch</span>
+            <span>Python</span><span>Bash</span><span>PowerShell</span>
+            <span>NGINX</span><span>TLS</span><span>IAM/RBAC</span>
+            <!-- add new skills here -->
+        </div>
+
+        <hr>
+
+        <!-- Certifications -->
+        <div class="label">certifications</div>
+        <ul class="certs">
+            <li>AWS Solutions Architect – Associate</li>
+            <li>Azure Developer</li>
+            <li>Azure Administrator</li>
+            <li>Azure AI Engineer</li>
+        </ul>
+
+    </div>
+
+    <footer>© 2026 Bharath M · built by hand, under 14kb</footer>
+
+</body>
+
+</html>

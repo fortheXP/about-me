@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: my-site
+  name: my-site
+  namespace: my-site
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-site
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: my-site
+    spec:
+      containers:
+      - image: ghcr.io/forthexp/about-me:sha-da9c1f4
+        name: about-me
+      imagePullSecrets:
+      - name: ghcr-secret

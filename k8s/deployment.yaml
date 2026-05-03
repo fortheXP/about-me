@@ -17,7 +17,7 @@ spec:
         app: my-site
     spec:
       containers:
-      - image: ghcr.io/forthexp/about-me:sha-da9c1f4
+      - image: ghcr.io/forthexp/about-me@sha256:450d00a12c8429475e8eb775b3b375a84bf92ba969e93adade8605cacf361ab4
         name: about-me
       imagePullSecrets:
       - name: ghcr-secret
